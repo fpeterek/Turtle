@@ -200,13 +200,12 @@ void Turtle::MoveTurtle() {
 void Turtle::Circle() {
     
     if (_action.parameters.size() == 1) { _action.parameters.push_back(360); }
-    else if (_action.parameters[1] > 360 or _action.parameters[1] <= 0) {
     
-        _action.isValidAction = false;
+    if (_action.parameters[1] == 0) {
+        
         _action.isFinished = true;
         
     }
-    
     int rotateBy, moveBy, offsetX, offsetY;
     
     const int radius   = _action.parameters[0];
@@ -215,6 +214,11 @@ void Turtle::Circle() {
     if (_action.parameters[1] >= 10) {
     
         rotateBy = 10;
+        
+    }
+    else if (_action.parameters[1] <= -10) {
+        
+        rotateBy = -10;
         
     }
     else {
