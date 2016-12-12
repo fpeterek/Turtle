@@ -14,8 +14,8 @@ Commands:
 * rotate x - The turtle rotates by x degrees
 * move x - The turtle moves by x in whatever direction it is currently facing
 * circle x degree=360 - The turtle draws an arc with diameter x, if you don't want a full circle, pass in parameter degree, which sets the measure of the arc, if degree is a negative number, the arc will be drawn in the opposite direction
-* color r g b - Pass in an rgb value to set the color of the brush
-* background r g b - Pass in an rgb values to set the color of the background
+* color r g b - Pass in rgb values to set the color of the brush
+* background r g b - Pass in rgb values to set the color of the background
 * thickness x - Set the thickness of the brush to x
 * speed x - Set the turtle's speed to x
 * penup - Stop drawing
