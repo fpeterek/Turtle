@@ -30,7 +30,7 @@ void ErrorMessage::ButtonSetup() {
     
     _buttonText.setFont(_font);
     _buttonText.setString("Exit");
-    _buttonText.setColor(sf::Color(60, 60, 60));
+    _buttonText.setFillColor(sf::Color(60, 60, 60));
     /* Stupid way of doing it, but the string never changes, so it should work, it just isn't very portable */
     _buttonText.setPosition(getSize().x / 2 - 29, getSize().y / 2 + 3);
     
@@ -48,7 +48,7 @@ void ErrorMessage::Setup() {
     _font.loadFromFile(resourcePath() + "Inconsolata-Regular.ttf");
     _text.setFont(_font);
     
-    _text.setColor(sf::Color::Black);
+    _text.setFillColor(sf::Color::Black);
     _text.setString(_message);
     _text.setCharacterSize(30);
     
@@ -123,7 +123,7 @@ App::App() {
     _coordinates.setFont(_consoleFont);
     _coordinates.setCharacterSize(40);
     // _coordinates.setPosition(getSize().x - 350, 20);
-    _coordinates.setColor(sf::Color::Black);
+    _coordinates.setFillColor(sf::Color::Black);
     
     _background.setFillColor(sf::Color::White);
     
@@ -212,7 +212,7 @@ void App::ChangeBackground(std::vector<std::string> & params) {
     g = ~g;
     b = ~b;
     
-    _coordinates.setColor(sf::Color(r, g, b));
+    _coordinates.setFillColor(sf::Color(r, g, b));
     
 }
 
